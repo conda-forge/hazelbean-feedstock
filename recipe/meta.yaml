@@ -20,6 +20,9 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
+    - python      # [build_platform != target_platform]
+    - cython <3   # [build_platform != target_platform]
+    - numpy       # [build_platform != target_platform]
   host:
     - python
     - pip
