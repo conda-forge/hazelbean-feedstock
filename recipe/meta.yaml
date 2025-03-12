@@ -69,6 +69,7 @@ requirements:
     - six
     - statsmodels
     - taskgraph
+    - tqdm
     - xarray
     - xlrd
     - libgdal-hdf5
