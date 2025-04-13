@@ -12,7 +12,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
-  skip: true  # [py>=312]
+  #skip: true  # [py>=312]
 
 requirements:
   build:
@@ -75,8 +75,8 @@ requirements:
     - libgdal-hdf5
 
   # Packages that are optional at runtime but must match a specification when installed.
-  run_constrained:
-    - natcap.invest ==3.11.0
+  #run_constrained:
+  #  - natcap.invest ==3.11.0
 
 
 test:
