@@ -35,6 +35,7 @@ requirements:
     - Pyro4
     - aenum
     - anytree
+    - cython
     - dask
     - descartes
     - geopandas
@@ -45,6 +46,7 @@ requirements:
     - google-cloud-storage
     - markdown
     - matplotlib-base
+    - natcap.invest
     - netcdf4
     - numpy
     - openpyxl
@@ -62,7 +64,7 @@ requirements:
     - scikit-learn
     - scipy
     - seaborn
-    - setuptools <70
+    - setuptools >=70
     - setuptools_scm
     - shapely
     - sip
@@ -73,10 +75,6 @@ requirements:
     - xarray
     - xlrd
     - libgdal-hdf5
-
-  # Packages that are optional at runtime but must match a specification when installed.
-  #run_constrained:
-  #  - natcap.invest ==3.11.0
 
 
 test:
