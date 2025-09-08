@@ -1,5 +1,5 @@
 {% set name = "hazelbean" %}
-{% set version = "1.7.5" %}
+{% set version = "1.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hazelbean-{{ version }}.tar.gz
-  sha256: 5e4928b95b2859a8dc1783e4ceab1a544af00b04850050a8a41a2d41a442a689
+  sha256: 03918116b4779d4441cc105fd87b473c7eac55082b1ce86802bd89c2af0aeeff
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
