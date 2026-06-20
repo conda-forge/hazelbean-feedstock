@@ -1,5 +1,5 @@
 {% set name = "hazelbean" %}
-{% set version = "1.7.2" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hazelbean-{{ version }}.tar.gz
-  sha256: 30236bac23ba71c606b0196d28017cddcadd48dd9c6d6995d4c6da3486fcda51
+  sha256: b3317461d74510a279af92b3413d0d2ffa7e4508ef9251e840dd27ba5d440352
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -35,6 +35,7 @@ requirements:
     - Pyro4
     - aenum
     - anytree
+    - cython
     - dask
     - descartes
     - geopandas
@@ -45,6 +46,7 @@ requirements:
     - google-cloud-storage
     - markdown
     - matplotlib-base
+    - natcap.invest
     - netcdf4
     - numpy
     - openpyxl
@@ -62,7 +64,7 @@ requirements:
     - scikit-learn
     - scipy
     - seaborn
-    - setuptools <70
+    - setuptools >=70
     - setuptools_scm
     - shapely
     - sip
@@ -73,10 +75,6 @@ requirements:
     - xarray
     - xlrd
     - libgdal-hdf5
-
-  # Packages that are optional at runtime but must match a specification when installed.
-  #run_constrained:
-  #  - natcap.invest ==3.11.0
 
 
 test:
@@ -98,5 +96,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - Ralph-20
     - phargogh
     - jandrewjohnson
