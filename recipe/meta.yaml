@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
   #skip: true  # [py>=312]
 
 requirements:
@@ -57,6 +57,9 @@ requirements:
     - pyqt
     - python
     - python-pptx
+    - pytest
+    - pytest-cov
+    - pytest-benchmark
     - pyyaml
     - qtawesome
     - qtpy
