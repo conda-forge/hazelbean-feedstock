@@ -57,6 +57,9 @@ requirements:
     - pyqt
     - python
     - python-pptx
+    - pytest
+    - pytest-cov
+    - pytest-benchmark
     - pyyaml
     - qtawesome
     - qtpy
