@@ -12,6 +12,10 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  # py310 solves have degraded to the point of exceeding the 6h CI cap on
+  # win_64 (v1.8.0: 36m, v2.0.0: timeout), while py311+ build in under 20m.
+  # Python 3.10 is EOL October 2026.
+  skip: true  # [py<311]
   #skip: true  # [py>=312]
 
 requirements:
@@ -57,9 +61,6 @@ requirements:
     - pyqt
     - python
     - python-pptx
-    - pytest
-    - pytest-cov
-    - pytest-benchmark
     - pyyaml
     - qtawesome
     - qtpy
